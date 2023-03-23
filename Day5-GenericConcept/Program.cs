@@ -13,7 +13,8 @@ namespace Day5_GenericConcept
             Console.WriteLine("Welcome To Generics Concepts Problems");
             Console.WriteLine("Select any one option \n 1. Delete Int Element \n 2. Delete Double Element \n" +
                 " 3. Delete Char Element \n \n ****Below Option for Generic Methode \n 4. Delete Int Element using Generic Method \n" +
-                " 5. Delete Double Element using Generic Method \n 6. Delete Char Element using Generic Method");
+                " 5. Delete Double Element using Generic Method \n 6. Delete Char Element using Generic Method \n \n ****Below Option for Generic Class \n" +
+                "7. Delete Int Element using Generic Class");
             int option = Convert.ToInt32(Console.ReadLine());
 
             switch (option)
@@ -59,6 +60,14 @@ namespace Day5_GenericConcept
                     char charDeleteG = Convert.ToChar(Console.ReadLine());
                     DeleteElement.RemoveElementFromArray<char>(charArryG, charDeleteG);
                     break;
+                case 7:
+                    int[] intArryGenericClass = DeleteElement.GetIntElement();
+                    Console.WriteLine("Plese pick up any one elemnt");
+                    int deleteGenericClass = Convert.ToInt32(Console.ReadLine());
+                    DeleteElementGeneric<int> deleteElementGeneric = new DeleteElementGeneric<int>(intArryGenericClass, deleteGenericClass);
+                    deleteElementGeneric.RemoveElementFromArrayGeneric();
+                    break;
+
 
                 default:
                     Console.WriteLine("Please Enter Right Option number From given List");
