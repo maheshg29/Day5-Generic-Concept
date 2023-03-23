@@ -11,7 +11,8 @@ namespace Day5_GenericConcept
         static void Main(string[] args)
         {
             Console.WriteLine("Welcome To Generics Concepts Problems");
-            Console.WriteLine("Select any one option \n 1. Delete Int Element \n 2. Delete Double Element");
+            Console.WriteLine("Select any one option \n 1. Delete Int Element \n 2. Delete Double Element \n" +
+                " 3. Delete Char Element");
             int option = Convert.ToInt32(Console.ReadLine());
 
             switch (option)
@@ -28,6 +29,13 @@ namespace Day5_GenericConcept
                     Console.WriteLine("Plese pick up any one elemnt");
                     double doubleDelete = Convert.ToDouble(Console.ReadLine());
                     DeleteElement.DeleteDoubleElement(doubleArry, doubleDelete);
+                    break;
+
+                case 3:
+                    char[] charArry = DeleteElement.GetCharElement();
+                    Console.WriteLine("Plese pick up any one elemnt");
+                    char charDelete = Convert.ToChar(Console.ReadLine());
+                    DeleteElement.DeleteCharElement(charArry, charDelete);
                     break;
 
                 default:
