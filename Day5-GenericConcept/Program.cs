@@ -15,7 +15,7 @@ namespace Day5_GenericConcept
                 " 3. Delete Char Element \n \n ****Below Option for Generic Methode \n 4. Delete Int Element using Generic Method \n" +
                 " 5. Delete Double Element using Generic Method \n 6. Delete Char Element using Generic Method \n \n ****Below Option for Generic Class \n" +
                 "7. Delete Int Element using Generic Class \n8. Delete Double Element using Generic Class \n9. Delete Char Element using Generic Class \n" +
-                "\n \n ****Below Option for Minimum Number \n10. Find Minimum Integer value");
+                "\n \n ****Below Option for Minimum Number \n10. Find Minimum Integer value \n11. Find Minimum Float value");
             int option = Convert.ToInt32(Console.ReadLine());
 
             switch (option)
@@ -87,6 +87,10 @@ namespace Day5_GenericConcept
                     break;
                 case 10:
                     FindMinimum.IntMin();
+                    break;
+
+                case 11:
+                    FindMinimum.FloatMin();
                     break;
 
                 default:
