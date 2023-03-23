@@ -45,6 +45,7 @@
   <ItemGroup>
     <Compile Include="DeleteElement.cs" />
     <Compile Include="DeleteElementGeneric.cs" />
+    <Compile Include="FindMinimum.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

@@ -14,7 +14,8 @@ namespace Day5_GenericConcept
             Console.WriteLine("Select any one option \n 1. Delete Int Element \n 2. Delete Double Element \n" +
                 " 3. Delete Char Element \n \n ****Below Option for Generic Methode \n 4. Delete Int Element using Generic Method \n" +
                 " 5. Delete Double Element using Generic Method \n 6. Delete Char Element using Generic Method \n \n ****Below Option for Generic Class \n" +
-                "7. Delete Int Element using Generic Class \n8. Delete Double Element using Generic Class \n9. Delete Char Element using Generic Class ");
+                "7. Delete Int Element using Generic Class \n8. Delete Double Element using Generic Class \n9. Delete Char Element using Generic Class \n" +
+                "\n \n ****Below Option for Minimum Number \n10. Find Minimum Integer value");
             int option = Convert.ToInt32(Console.ReadLine());
 
             switch (option)
@@ -84,7 +85,9 @@ namespace Day5_GenericConcept
                     DeleteElementGeneric<char> deleteElementGeneric2 = new DeleteElementGeneric<char>(charArryGenericClass, charDeleteGenericClass);
                     deleteElementGeneric2.RemoveElementFromArrayGeneric();
                     break;
-
+                case 10:
+                    FindMinimum.IntMin();
+                    break;
 
                 default:
                     Console.WriteLine("Please Enter Right Option number From given List");
