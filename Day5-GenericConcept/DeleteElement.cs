@@ -29,6 +29,27 @@ namespace Day5_GenericConcept
             }
         }
 
+        public static void DeleteDoubleElement(double[] arry, double delete)
+        {
+            int k = 0;
+            double[] result = new double[arry.Length - 1];
+
+            for (int i = 0; i < arry.Length; i++)
+            {
+                if (delete != arry[i])
+                {
+                    result[k] = arry[i];
+                    k++;
+                }
+            }
+
+            Console.WriteLine("\nResult After Delete Elemnet ");
+            foreach (double j in result)
+            {
+                Console.Write(j + " ");
+            }
+        }
+
         public static int[] GetIntElement()
         {
             Console.WriteLine("Enter How many elemet u want to add");
@@ -40,6 +61,19 @@ namespace Day5_GenericConcept
                 arr[i] = Convert.ToInt32(Console.ReadLine());
             }
             return arr;
+        }
+
+        public static double[] GetDoubleElement()
+        {
+            Console.WriteLine("Enter How many elemet u want to add");
+            DeleteElement.size = Convert.ToInt32(Console.ReadLine());
+            double[] doubleArry = new double[DeleteElement.size];
+            Console.WriteLine("Please enter Double element one by one");
+            for (int i = 0; i < doubleArry.Length; i++)
+            {
+                doubleArry[i] = Convert.ToDouble(Console.ReadLine());
+            }
+            return doubleArry;
         }
     }
 }
