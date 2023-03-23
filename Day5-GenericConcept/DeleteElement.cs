@@ -109,6 +109,26 @@ namespace Day5_GenericConcept
             }
             return charArry;
         }
+
+        public static void RemoveElementFromArray<T>(T[] arr, T element)
+        {
+            int k = 0;
+            T[] result = new T[arr.Length - 1];
+            for (int i = 0; i < arr.Length; i++)
+            {
+                if (!arr[i].Equals(element))
+                {
+                    result[k] = arr[i];
+                    k++;
+                }
+            }
+
+            Console.WriteLine("\nResult After Delete Elemnet ");
+            foreach (T j in result)
+            {
+                Console.Write(j + " ");
+            }
+        }
     }
 }
 
