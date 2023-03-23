@@ -14,7 +14,7 @@ namespace Day5_GenericConcept
             Console.WriteLine("Select any one option \n 1. Delete Int Element \n 2. Delete Double Element \n" +
                 " 3. Delete Char Element \n \n ****Below Option for Generic Methode \n 4. Delete Int Element using Generic Method \n" +
                 " 5. Delete Double Element using Generic Method \n 6. Delete Char Element using Generic Method \n \n ****Below Option for Generic Class \n" +
-                "7. Delete Int Element using Generic Class \n8. Delete Double Element using Generic Class ");
+                "7. Delete Int Element using Generic Class \n8. Delete Double Element using Generic Class \n9. Delete Char Element using Generic Class ");
             int option = Convert.ToInt32(Console.ReadLine());
 
             switch (option)
@@ -75,6 +75,14 @@ namespace Day5_GenericConcept
                     double doubleDeleteGenericClass = Convert.ToDouble(Console.ReadLine());
                     DeleteElementGeneric<double> deleteElementGeneric1 = new DeleteElementGeneric<double>(doubleArryGenericClass, doubleDeleteGenericClass);
                     deleteElementGeneric1.RemoveElementFromArrayGeneric();
+                    break;
+
+                case 9:
+                    char[] charArryGenericClass = DeleteElement.GetCharElement();
+                    Console.WriteLine("Plese pick up any one elemnt");
+                    char charDeleteGenericClass = Convert.ToChar(Console.ReadLine());
+                    DeleteElementGeneric<char> deleteElementGeneric2 = new DeleteElementGeneric<char>(charArryGenericClass, charDeleteGenericClass);
+                    deleteElementGeneric2.RemoveElementFromArrayGeneric();
                     break;
 
 
