@@ -17,7 +17,7 @@ namespace Day5_GenericConcept
                 "7. Delete Int Element using Generic Class \n8. Delete Double Element using Generic Class \n9. Delete Char Element using Generic Class \n" +
                 "\n \n ****Below Option for Minimum Number \n10. Find Minimum Integer value \n11. Find Minimum Float value \n12. Find Minimum String value \n" +
                 "\n \n ****Below Option for Find Minimum Number Using Generic Methode \n 13. Int Number \n 14. Float Number \n 15. Find Minimum String Number\n" +
-                "\n \n ****Below Option for Find Minimum Number Using Generic Class \n 16. Int Number \n 17. Float Number");
+                "\n \n ****Below Option for Find Minimum Number Using Generic Class \n 16. Int Number \n 17. Float Number \n 18. Find Minimum String Number");
             int option = Convert.ToInt32(Console.ReadLine());
 
             switch (option)
@@ -123,9 +123,23 @@ namespace Day5_GenericConcept
                     MinimumGenericClass<int> minimumGenericClass = new MinimumGenericClass<int>(DeleteElement.GetIntElement());
                     minimumGenericClass.FindminimumGenerricClass();
                     break;
+
                 case 17:
                     MinimumGenericClass<double> minimumGenericClass1 = new MinimumGenericClass<double>(DeleteElement.GetDoubleElement());
                     minimumGenericClass1.FindminimumGenerricClass();
+                    break;
+
+                case 18:
+                    string[] strings1 = new string[3];
+                    Console.WriteLine("Please Enter String 1");
+                    strings1[0] = Console.ReadLine();
+                    Console.WriteLine("Please Enter String 2");
+                    strings1[1] = Console.ReadLine();
+                    Console.WriteLine("Please Enter String 3");
+                    strings1[2] = Console.ReadLine();
+                    int[] stringArrayCount1 = new int[3] { strings1[0].Length, strings1[1].Length, strings1[2].Length };
+                    MinimumGenericClass<int> minimumGenericClass2 = new MinimumGenericClass<int>(stringArrayCount1);
+                    minimumGenericClass2.FindminimumGenerricClass();
                     break;
 
 
