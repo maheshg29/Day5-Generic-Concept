@@ -48,7 +48,7 @@ namespace Day5_GenericConcept
 
         public static void StringMin()
         {
-            string[] strings=new string[3];
+            string[] strings = new string[3];
             Console.WriteLine("Please Enter String 1");
             strings[0] = Console.ReadLine();
             Console.WriteLine("Please Enter String 2");
@@ -67,8 +67,26 @@ namespace Day5_GenericConcept
             }
             else
                 Console.WriteLine("Minimum string is " + strings[2]);
-            
-           
+
+        }
+
+        public void FindminimumGenerric<T>(T[] array) where T : IComparable<T>
+        {
+            for (int i = 0; i < array.Length - 1; i++)
+            {
+                for (int j = 0; j < array.Length - i - 1; j++)
+                {
+                    if (array[j].CompareTo(array[j + 1])>0) 
+                    {
+                        // swap arr[j] and arr[j+1]
+                        T temp = array[j];
+                        array[j] = array[j + 1];
+                        array[j + 1] = temp;
+                    }
+                }
+            }
+            Console.WriteLine("Minimum value In Given Array is " + array[0]);
         }
     }
+    
 }
