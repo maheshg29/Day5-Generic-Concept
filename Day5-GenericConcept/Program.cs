@@ -17,7 +17,7 @@ namespace Day5_GenericConcept
                 "7. Delete Int Element using Generic Class \n8. Delete Double Element using Generic Class \n9. Delete Char Element using Generic Class \n" +
                 "\n \n ****Below Option for Minimum Number \n10. Find Minimum Integer value \n11. Find Minimum Float value \n12. Find Minimum String value \n" +
                 "\n \n ****Below Option for Find Minimum Number Using Generic Methode \n 13. Int Number \n 14. Float Number \n 15. Find Minimum String Number\n" +
-                "\n \n ****Below Option for Find Minimum Number Using Generic Class \n 16. Int Number");
+                "\n \n ****Below Option for Find Minimum Number Using Generic Class \n 16. Int Number \n 17. Float Number");
             int option = Convert.ToInt32(Console.ReadLine());
 
             switch (option)
@@ -122,6 +122,10 @@ namespace Day5_GenericConcept
                 case 16:
                     MinimumGenericClass<int> minimumGenericClass = new MinimumGenericClass<int>(DeleteElement.GetIntElement());
                     minimumGenericClass.FindminimumGenerricClass();
+                    break;
+                case 17:
+                    MinimumGenericClass<double> minimumGenericClass1 = new MinimumGenericClass<double>(DeleteElement.GetDoubleElement());
+                    minimumGenericClass1.FindminimumGenerricClass();
                     break;
 
 
